@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Form, ListGroup, Navbar } from 'react-bootstrap';
+import { Button, Card, Col, Container, Form, Navbar, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -13,16 +13,58 @@ const Footer = () => {
                             We Offer You A Greate World Tour.
                         </Card.Text>
                     </div>
-                    <div className="col-12 col-md-4">
-                        <Form className="text-center mb-2 fs-4">Working Hour</Form>
+                    <div className="col-12 col-md-4 p-3">
+                        <Card.Text className='fs-4 text-center'>Give me your feedback</Card.Text>
                         <Form>
-                            <Card>
-                                <ListGroup variant="flush">
-                                    <ListGroup.Item>Monday to Friday: 9am - 5pm</ListGroup.Item>
-                                    <ListGroup.Item>Saturday: 9am - 1pm</ListGroup.Item>
-                                    <ListGroup.Item>Sunday: Closed</ListGroup.Item>
-                                </ListGroup>
-                            </Card>
+                            <Row xs={1} md={2}>
+                                <Col>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                        <Form.Control
+                                            style={{ border: 'none', backgroundColor: '#F7F7F7', padding: '10px' }}
+                                            type="text"
+                                            placeholder="Full Name"
+                                            required />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                        <Form.Control
+                                            style={{ border: 'none', backgroundColor: '#F7F7F7', padding: '10px' }}
+                                            type="email"
+                                            placeholder="Email address"
+                                            required />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row xs={1} md={2}>
+                                <Col>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                        <Form.Control
+                                            style={{ border: 'none', backgroundColor: '#F7F7F7', padding: '10px' }}
+                                            type="number"
+                                            placeholder="Phone Number"
+                                            required />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                        <Form.Control
+                                            style={{ border: 'none', backgroundColor: '#F7F7F7', padding: '10px' }}
+                                            type="text"
+                                            placeholder="Your Address"
+                                            required />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                <Form.Control
+                                    style={{ border: 'none', backgroundColor: '#F7F7F7', padding: '10px' }}
+                                    as="textarea"
+                                    placeholder='Your Message'
+                                    rows={3}
+                                    required />
+                            </Form.Group>
+                            <Button type='submit' className='btn-grad'>Send</Button>
                         </Form>
                     </div>
                     <div className="col-12 col-md-4 p-5">

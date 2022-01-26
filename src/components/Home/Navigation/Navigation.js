@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../Hooks/useAuth';
 
 const Navigation = () => {
@@ -14,11 +15,11 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className='text-light' />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto d-flex align-items-center fw-bold">
-                            <Nav.Link className='text-light' href="#home">Home</Nav.Link>
-                            <Nav.Link className='text-light' href="#about">About</Nav.Link>
-                            <Nav.Link className='text-light' href="#reviews">Reviews</Nav.Link>
-                            <Nav.Link className='text-light' href="#blogs">Blogs</Nav.Link>
-                            <Nav.Link className='text-light' href="#contact">Contact</Nav.Link>
+                            <NavLink className='text-light text-decoration-none me-3' to="/">Home</NavLink>
+                            <HashLink className='text-light text-decoration-none me-3' to="/home#blogs">Blogs</HashLink>
+                            <HashLink className='text-light text-decoration-none me-3' to="/home#reviews">Reviews</HashLink>
+                            <HashLink className='text-light text-decoration-none me-3' to="/home#dashboard">Dashboard</HashLink>
+                            <HashLink className='text-light text-decoration-none me-3' to="/home#contact">Contact</HashLink>
                         </Nav>
                         <Nav.Link className='text-light' href="">Signed in as: {user.displayName}</Nav.Link>
                         {user.email ?
