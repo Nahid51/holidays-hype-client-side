@@ -20,15 +20,13 @@ const Navigation = () => {
                             <Nav.Link className='text-light' href="#blogs">Blogs</Nav.Link>
                             <Nav.Link className='text-light' href="#contact">Contact</Nav.Link>
                         </Nav>
-                        <Nav className="ms-auto">
-                            <Nav.Link className='text-light' href="">Signed in as: {user.displayName}</Nav.Link>
-                            {user.email ?
-                                <Button onClick={logOut} className='fw-bold btn-grad'>Logout</Button> :
-                                <NavLink to='/login'>
-                                    <Button className='fw-bold btn-grad'>Login</Button>
-                                </NavLink>
-                            }
-                        </Nav>
+                        <Nav.Link className='text-light' href="">Signed in as: {user.displayName}</Nav.Link>
+                        {user.email ?
+                            <Button onClick={logOut} className='fw-bold btn-grad'>Logout</Button> :
+                            <NavLink to='/login'>
+                                <Button className='fw-bold btn-grad'>Login</Button>
+                            </NavLink>
+                        }
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

@@ -10,12 +10,12 @@
 }
 @media only screen and (max-width: 600px) {
     .banner-setup h3{
-        font-size: 2rem;
+        font-size: 20px;
         position: relative;
         top: 0;
     }
     .banner-setup p{
-        font-size: 1rem;
+        font-size: 15px;
         position: relative;
         top: 0;
     }
