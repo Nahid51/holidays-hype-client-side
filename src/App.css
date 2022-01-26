@@ -13,3 +13,8 @@
   background-color: #087990;
   /* border: 2px solid #E35D6A; */
 }
+@media only screen and (max-width: 600px) {
+  .App{
+    overflow-x: hidden;
+  }
+}
