@@ -1,14 +1,26 @@
 import React, { useEffect, useState } from 'react';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
 import { Row } from 'react-bootstrap';
-import Blog from './Blog';
+import Blog from '../Blog/Blog';
+import './Blogs.css'
 
 const Blogs = () => {
     const [blogInfo, setBlogInfo] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const size = 10;
+
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch(`http://localhost:5000/blogs?page=${page}&&size=${size}`)
             .then(res => res.json())
-            .then(data => setBlogInfo(data))
-    }, [])
+            .then(data => {
+                setBlogInfo(data.result)
+                const count = data.count;
+                const pageNumber = Math.ceil(count / size);
+                setPageCount(pageNumber);
+            })
+    }, [page])
     return (
         <div>
             <div className='mt-5 text-center'>
@@ -21,7 +33,19 @@ const Blogs = () => {
                                 blog={blog}
                             ></Blog>
                         ))}
+
                     </Row>
+                    <div className='pagination'>
+                        {
+                            [...Array(pageCount).keys()].map(number =>
+                                <button
+                                    className={number === page ? 'selected' : ''}
+                                    key={number}
+                                    onClick={() => setPage(number)}
+                                > {number + 1}</button>
+                            )
+                        }
+                    </div>
                 </div>
             </div>
         </div>
