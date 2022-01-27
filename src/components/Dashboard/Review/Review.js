@@ -16,7 +16,7 @@ const Review = () => {
     }
     const handleButton = e => {
         e.preventDefault();
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://holidays-hype.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(reviewData)

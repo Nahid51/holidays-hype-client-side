@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 import { Row } from 'react-bootstrap';
 import Blog from '../Blog/Blog';
 import './Blogs.css'
@@ -12,7 +10,7 @@ const Blogs = () => {
     const size = 10;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs?page=${page}&&size=${size}`)
+        fetch(`https://holidays-hype.herokuapp.com/blogs?page=${page}&&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setBlogInfo(data.result)

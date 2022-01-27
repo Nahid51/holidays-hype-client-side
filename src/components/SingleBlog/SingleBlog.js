@@ -11,7 +11,7 @@ const SingleBlog = () => {
     const rating = Number(singleBlog?.rating);
 
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://holidays-hype.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setBlogInfo(data))
     }, []);
