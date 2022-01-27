@@ -18,7 +18,7 @@ const Navigation = () => {
                             <NavLink className='text-light text-decoration-none me-3' to="/">Home</NavLink>
                             <HashLink className='text-light text-decoration-none me-3' to="/home#blogs">Blogs</HashLink>
                             <HashLink className='text-light text-decoration-none me-3' to="/home#reviews">Reviews</HashLink>
-                            <HashLink className='text-light text-decoration-none me-3' to="/home#dashboard">Dashboard</HashLink>
+                            <NavLink className='text-light text-decoration-none me-3' to="/dashboard">Dashboard</NavLink>
                             <HashLink className='text-light text-decoration-none me-3' to="/home#contact">Contact</HashLink>
                         </Nav>
                         <Nav.Link className='text-light' href="">Signed in as: {user.displayName}</Nav.Link>

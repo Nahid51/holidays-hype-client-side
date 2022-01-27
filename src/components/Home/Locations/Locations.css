@@ -1,0 +1,36 @@
+.border-setup{
+    border: none;
+    width: 75%;
+    height: 47rem;
+    margin-left: auto;
+    overflow-y: scroll;
+}
+
+.border-setup::-webkit-scrollbar{
+    display: none;
+  }
+
+.spot-h3{
+    display: flex;
+    justify-content: end;
+}
+
+@media only screen and (max-width: 600px) {
+    .border-setup{
+        width: 100%;
+        margin-left: 0;
+    }
+    .spot-h3{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    .border-setup{
+        height: 31rem;
+    }
+    .spot-h3{
+        display: flex;
+        justify-content: center;
+    }
+}
