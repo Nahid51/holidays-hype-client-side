@@ -12,8 +12,8 @@ const Reviews = () => {
     }, [])
     return (
         <div id='reviews'>
-            <Container>
-                <div className='mt-5 text-center'>
+            <Container className='mt-5'>
+                <div className='text-center'>
                     <h3 className='fw-bold'>Travelers' <span style={{ color: "#7AB259" }}>Experiences</span></h3>
                     <div className='mt-3 mb-3'>
                         <Row xs={1} md={4} className="g-4">

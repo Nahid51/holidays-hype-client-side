@@ -20,7 +20,7 @@ const Blogs = () => {
             })
     }, [page])
     return (
-        <div id='blogs'>
+        <div>
             <div className='mt-5 text-center'>
                 <h3 className='fw-bold'>Our <span style={{ color: "#7AB259" }}>Blogs</span></h3>
                 <div className='mt-3 mb-3'>

@@ -28,7 +28,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/singleBlog/:blogId" element={<PrivateRoute><SingleBlog /></PrivateRoute>} />
+            <Route path="/singleBlog/:id" element={<PrivateRoute><SingleBlog /></PrivateRoute>} />
             <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}>
               <Route path="/dashboard/" element={<AddReview />} />
               <Route path="/dashboard/oneBlog/:id" element={<OneBlog />} />

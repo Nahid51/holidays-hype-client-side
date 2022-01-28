@@ -5,8 +5,8 @@ import Locations from '../Locations/Locations';
 
 const BlogsLocations = () => {
     return (
-        <div>
-            <Container>
+        <div id='blogs'>
+            <Container className='mt-5'>
                 <div className='row'>
                     <div className='col-md-8 col-12'>
                         <Blogs />

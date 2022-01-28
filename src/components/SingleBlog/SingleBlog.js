@@ -5,21 +5,24 @@ import { useParams } from 'react-router-dom';
 import Navigation from '../Home/Navigation/Navigation';
 
 const SingleBlog = () => {
-    const { blogId } = useParams();
-    const [blogInfo, setBlogInfo] = useState([]);
+    const { id } = useParams();
+    const [blogDetails, setBlogDetails] = useState([]);
     const [singleBlog, setSingleBlog] = useState([]);
     const rating = Number(singleBlog?.rating);
 
+    // loaded data from database
     useEffect(() => {
         fetch('https://holidays-hype.herokuapp.com/blogs')
             .then(res => res.json())
-            .then(data => setBlogInfo(data))
-    }, []);
+            .then(data => setBlogDetails(data.result))
+    }, [])
+
+    // compare and find single product
     useEffect(() => {
-        const foundBlog = blogInfo.find(blog => blog._id === blogId);
-        console.log(foundBlog);
+        const foundBlog = blogDetails?.find(blog => blog?._id === id);
         setSingleBlog(foundBlog);
-    }, [blogId, blogInfo]);
+    }, [id, blogDetails])
+
     return (
         <div>
             <Navigation />
