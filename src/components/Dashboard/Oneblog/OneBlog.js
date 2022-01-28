@@ -13,7 +13,7 @@ const OneBlog = () => {
     const newDate = new Date().toLocaleString();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/updateBlog/${id}`)
+        fetch(`https://holidays-hype.herokuapp.com/updateBlog/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id]);
@@ -49,7 +49,7 @@ const OneBlog = () => {
     }
     const handleButton = e => {
         e.preventDefault();
-        fetch(`http://localhost:5000/updateBlog/${id}`, {
+        fetch(`https://holidays-hype.herokuapp.com/updateBlog/${id}`, {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(blog)

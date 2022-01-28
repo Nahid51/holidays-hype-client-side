@@ -15,7 +15,7 @@ const AllBlogs = ({ blogs }) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to delete this blog?')
         if (proceed) {
-            fetch(`http://localhost:5000/deleteBlog/${_id}`, {
+            fetch(`https://holidays-hype.herokuapp.com/deleteBlog/${_id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })

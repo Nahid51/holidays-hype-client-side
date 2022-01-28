@@ -6,7 +6,7 @@ const ManageBlog = () => {
     const [blogsInfo, setBlogsInfo] = useState([]);
     console.log();
     useEffect(() => {
-        fetch('http://localhost:5000/allBlogs')
+        fetch('https://holidays-hype.herokuapp.com/allBlogs')
             .then(res => res.json())
             .then(data => setBlogsInfo(data))
     }, [])
