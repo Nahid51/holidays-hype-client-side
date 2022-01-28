@@ -12,9 +12,11 @@ import PrivateRoute from './Redirects/PrivateRoute';
 import AdminRoute from './Redirects/AdminRoute';
 import NotFound from './components/NotFound/NotFound';
 import Dashboard from './components/Dashboard/Dashboard/Dashboard';
-import Review from './components/Dashboard/Review/Review';
 import AddBlog from './components/Dashboard/AddBlog/AddBlog';
 import SingleBlog from './components/SingleBlog/SingleBlog';
+import AddReview from './components/Dashboard/AddReview/AddReview';
+import ManageBlog from './components/Dashboard/ManageBlog/ManageBlog';
+import OneBlog from './components/Dashboard/Oneblog/OneBlog';
 
 function App() {
   return (
@@ -28,9 +30,10 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/singleBlog/:blogId" element={<SingleBlog />} />
             <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>}>
-              <Route path="/dashboard/" element={<Review />} />
+              <Route path="/dashboard/" element={<AddReview />} />
+              <Route path="/dashboard/oneBlog/:id" element={<OneBlog />} />
               <Route path="/dashboard/addblog" element={<AdminRoute><AddBlog /></AdminRoute>} />
-              {/* <Route path="/dashboard/manageservice" element={<AdminRoute><ManageService /></AdminRoute>} /> */}
+              <Route path="/dashboard/manageblog" element={<AdminRoute><ManageBlog /></AdminRoute>} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

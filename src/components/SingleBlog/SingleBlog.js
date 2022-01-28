@@ -37,7 +37,7 @@ const SingleBlog = () => {
                             '& > legend': { mt: 2 },
                         }}
                     >
-                        <Rating name="read-only" value={rating} readOnly />
+                        <Rating name="half-rating-read" value={rating} precision={0.5} readOnly />
                     </Box>
                 </div>
             </div>

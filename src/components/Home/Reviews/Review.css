@@ -1,0 +1,13 @@
+.card-style:hover{
+    border: none;
+    transition: .5s;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+.feedback-card{
+    height: 10rem;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+.feedback-card::-webkit-scrollbar{
+    display: none;
+  }

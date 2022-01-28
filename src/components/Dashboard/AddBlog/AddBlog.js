@@ -8,7 +8,6 @@ const AddBlog = () => {
     const { error, isLoading } = useAuth();
 
     const postDate = new Date().toLocaleString();
-    console.log(blogData);
 
     const handleAddBlog = e => {
         const field = e.target.name;
@@ -98,8 +97,8 @@ const AddBlog = () => {
                                 />
                             </Form.Group>
                         </div>
-                        <Button onClick={handleButton} className='btn edit-btn'>Submit</Button>
-                        <Button type='reset' className='btn edit-btn ms-1'>Reset</Button>
+                        <Button onClick={handleButton} className='btn btn-grad'>Submit</Button>
+                        <Button type='reset' className='btn btn-grad ms-1'>Reset</Button>
                     </Form>}
                 <Alert variant="warning">*Please click on each input section and submit information carefully.</Alert>
             </div>

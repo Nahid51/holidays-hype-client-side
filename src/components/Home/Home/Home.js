@@ -1,15 +1,17 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import BlogsLocations from '../BlogsLocations/BlogsLocations';
 import Footer from '../Footer/Footer';
 import Navigation from '../Navigation/Navigation';
-import ReviewsLocations from '../ReviewsLocations/ReviewsLocations';
+import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     return (
         <div>
             <Navigation />
             <Banner />
-            <ReviewsLocations />
+            <BlogsLocations />
+            <Reviews />
             <Footer />
         </div>
     );

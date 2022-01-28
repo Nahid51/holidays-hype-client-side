@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <>
+        <div id='contact'>
             <Card style={{ backgroundColor: "#28293e" }} className="text-light mt-5 border-0 rounded-0">
                 <Card.Body className='row d-flex justify-content-between align-items-center'>
                     <div className="col-12 col-md-4 p-5">
@@ -82,7 +82,7 @@ const Footer = () => {
                 </Card.Body>
                 <small className="text-center">&copy;2022 by Holidays Hype. Proudly created by myself.</small>
             </Card>
-        </>
+        </div>
     );
 };
 

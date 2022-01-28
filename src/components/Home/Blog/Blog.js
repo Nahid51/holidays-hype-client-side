@@ -5,7 +5,6 @@ import './Blog.css';
 
 const Blog = ({ blog }) => {
     const { _id, location, photo } = blog;
-    console.log(_id);
     return (
         <div>
             <Col>

@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import { NavLink, Outlet } from 'react-router-dom';
 import logo from '../../../images/logo.png'
 import useAuth from '../../../Hooks/useAuth';
-import { Button } from '@mui/material';
+import { Button } from 'react-bootstrap';
 
 const drawerWidth = 200;
 
@@ -37,21 +37,21 @@ function Dashboard(props) {
                 />
             </NavLink>
             <List>
-                <NavLink style={{ textDecoration: 'none', color: '#322A62' }} to="/dashboard/">Add Review</NavLink>
+                <NavLink style={{ textDecoration: 'none', color: '#322A62' }} to="/dashboard">Add Review</NavLink>
                 <br /><br />
 
                 {admin &&
                     <Box>
                         <NavLink style={{ textDecoration: 'none', color: '#322A62' }} to="/dashboard/addblog">Add Blog</NavLink>
                         <br /><br />
-                        <NavLink style={{ textDecoration: 'none', color: '#322A62' }} to="/dashboard/manageservice">Manage Blogs</NavLink>
+                        <NavLink style={{ textDecoration: 'none', color: '#322A62' }} to="/dashboard/manageblog">Manage Blogs</NavLink>
                     </Box>
                 }
 
                 {user.email ?
-                    <Button onClick={logOut} variant='contained' sx={{ mt: 5 }}>Logout</Button> :
+                    <Button className='btn-grad mt-5' onClick={logOut} >Logout</Button> :
                     <NavLink to='/login'>
-                        <Button variant='contained' sx={{ mt: 5 }}>Login</Button>
+                        <Button>Login</Button>
                     </NavLink>
                 }
             </List>

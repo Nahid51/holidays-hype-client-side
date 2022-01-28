@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Blogs from '../Blogs/Blogs';
 import Locations from '../Locations/Locations';
 
-const ReviewsLocations = () => {
+const BlogsLocations = () => {
     return (
         <div>
             <Container>
@@ -20,4 +20,4 @@ const ReviewsLocations = () => {
     );
 };
 
-export default ReviewsLocations;
+export default BlogsLocations;
